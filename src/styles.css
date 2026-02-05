@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* Custom color variables matching the design */
+:root {
+  --color-lime: #96ef0d;
+  --color-purple: #4613c4;
+  --color-orange: #ff5722;
+  --accent-orange: #ff6b35;
+  --text-dark: #1a1a2e;
+  --text-light: #595977;
+}
+
+body{
+  font-family: 'Cairo', sans-serif;
+}

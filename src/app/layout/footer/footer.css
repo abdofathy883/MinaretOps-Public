@@ -1,0 +1,9 @@
+.footer-container{
+    background-color: var(--color-purple);
+    border-radius: 20px;
+}
+
+i{
+    font-size: 20px;
+    color: white;
+}

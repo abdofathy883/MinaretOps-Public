@@ -1,0 +1,105 @@
+/* Hero Section Styles */
+.hero {
+  background: url('/assets/BG.png');
+  height: 100vh;
+}
+
+.hero h1 {
+  color: white;
+  font-weight: 800;
+}
+
+.cta1 {
+  background-color: var(--color-orange);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+}
+
+.cta2 {
+  background-color: white;
+  color: var(--color-purple);
+  border: navajowhite;
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+
+.wave{
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+}
+
+.dashed-line{
+  position: absolute;
+  top: 0;
+  left: 180px;
+  border-top: 2px dashed #e0e0e0;
+  top: 70px !important; 
+}
+
+/* Client Issues Box */
+.clients-issues {
+  border: 3px solid var(--color-purple);
+  border-radius: 30px;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.purple-text {
+  color: var(--color-purple);
+  border: 1px solid #e7eeec;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.grey-box {
+  background-color: #e6e6e6;
+  border-radius: 20px;
+}
+
+.white-box {
+  border: 1px solid green;
+  border-radius: 20px;
+}
+
+.cta{
+  background-color: white;
+  color: var(--color-purple);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cat-btn {
+  border: 1px solid #F2F2F2;
+  border-radius: 24px;
+  padding: 5px 30px;
+  background: none;
+  transition: 0.5s ease-in;
+  &:hover{
+    background: linear-gradient(#7B11F9, #7922D8, #3636B2);
+    color: white;
+  }
+}
+
+.about-box {
+  background-color: #f6f9fc;
+  padding: 30px 10px;
+  border-radius: 15px;
+}
+
+/* How We Work Section */
+.how-we-work {
+  background: url('/assets/Frame 55.png') no-repeat;
+  background-size: 100%;
+  margin-top: -320px;
+  padding-top: 400px;
+  position: relative;
+  z-index: 1;
+}

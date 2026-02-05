@@ -1,0 +1,22 @@
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: transparent;
+}
+
+.cta1 {
+  background-color: white;
+  color: var(--color-purple);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

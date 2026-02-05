@@ -1,0 +1,18 @@
+.pack-btn {
+  border: 1px solid #f2f2f2;
+  border-radius: 24px;
+  padding: 5px 30px;
+  background: none;
+  /* transition: 0.5s ease-in; */
+  margin-bottom: 15px;
+  &:hover {
+    background: linear-gradient(#7b11f9, #7922d8, #3636b2);
+    color: white;
+  }
+}
+
+.purplr-bg{
+    background: linear-gradient(#844FD9, #6158ED);
+    color: white;
+    border-radius: 30px;
+}
