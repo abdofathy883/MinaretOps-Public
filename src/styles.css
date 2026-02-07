@@ -1,4 +1,9 @@
 /* Custom color variables matching the design */
+:host {
+  display: block;
+  overflow: hidden;
+}
+
 :root {
   --color-lime: #96ef0d;
   --color-purple: #4613c4;
@@ -8,6 +13,11 @@
   --text-light: #595977;
 }
 
-body{
-  font-family: 'Cairo', sans-serif;
+body, input, button, select, textarea {
+  font-family: 'Cairo', sans-serif !important;
+  background-color: white;
+}
+
+.container{
+  width: 1200px;
 }

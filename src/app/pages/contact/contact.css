@@ -1,0 +1,39 @@
+.hero{
+    background-color: #F6F9FC;
+    border-radius: 30px;
+    margin-top: 150px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 .25rem #95ef0d7e;
+    border-color: #95ef0d7e;
+}
+
+.form-label {
+    color: var(--color-purple);
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(#9071DB, #6B42CF, #4613C4);
+    padding: 8px;
+    font-size: 18px;
+}
+
+.social-box{
+    background-color: #F6F9FC;
+    border-radius: 15px;
+}
+
+.text-grey{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.about-box {
+  background-color: #f6f9fc;
+  padding: 30px 10px;
+  border-radius: 15px;
+}

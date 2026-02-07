@@ -16,3 +16,21 @@
     color: white;
     border-radius: 30px;
 }
+
+.cta {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  background-color: rgba(241, 239, 255, 1);
+  padding: 5px;
+}
+
+.dark-cta{
+  background-color: rgba(69, 56, 186, 1);
+  color: white;
+}
+
+.tab-pane{
+  max-width: 1000px;
+  padding: 15px 0;
+}

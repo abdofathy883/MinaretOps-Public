@@ -10,5 +10,4 @@ import { Footer } from './layout/footer/footer';
   styleUrl: './app.css'
 })
 export class App {
-
 }

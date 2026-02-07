@@ -1,6 +1,7 @@
 .hero{
     background-color: #F6F9FC;
     border-radius: 30px;
+    margin-top: 150px;
 }
 
 .cta{
@@ -9,4 +10,17 @@
     border-radius: 50px;
     text-decoration: none;
     padding: 10px 20px;
+}
+
+.about-box {
+  background-color: #f6f9fc;
+  padding: 30px 10px;
+  border-radius: 15px;
+}
+
+@media (max-width: 750px) {
+    .cta{
+        width: 100%;
+        text-align: center;
+    }
 }

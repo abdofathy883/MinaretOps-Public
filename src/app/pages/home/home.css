@@ -2,6 +2,7 @@
 .hero {
   background: url('/assets/BG.png');
   height: 100vh;
+  /* z-index: 10000; */
 }
 
 .hero h1 {
@@ -37,6 +38,7 @@
   left: 180px;
   border-top: 2px dashed #e0e0e0;
   top: 70px !important; 
+  width: 70%;
 }
 
 /* Client Issues Box */
@@ -54,6 +56,8 @@
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 5px;
+  background-color: rgba(70, 19, 196, 0.02);
+  margin-bottom: 10px;
 }
 
 .grey-box {
@@ -62,8 +66,9 @@
 }
 
 .white-box {
-  border: 1px solid green;
+  border: 1px solid;
   border-radius: 20px;
+  border-color: rgba(230, 230, 230, 1);
 }
 
 .cta{
@@ -97,9 +102,16 @@
 /* How We Work Section */
 .how-we-work {
   background: url('/assets/Frame 55.png') no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   margin-top: -320px;
   padding-top: 400px;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 750px) {
+  .cta {
+    width: 100%;
+  }
 }
