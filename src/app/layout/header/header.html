@@ -1,25 +1,126 @@
-<header class="d-flex justify-content-between align-items-center py-4 px-5">
-  <!-- Logo (Right in RTL) -->
-  <div class="logo">
-    <a routerLink="/">
-      <img src="assets/logo2 1.png" alt="Al Mnara" height="60" />
-    </a>
+<header>
+  <!-- Header bar: logo, nav, CTA, mobile menu button -->
+  <div class="header-bar d-flex justify-content-between align-items-center py-4 px-5">
+    <!-- Logo (Right in RTL) -->
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/logo2 1.png" alt="Al Mnara" height="60" />
+      </a>
+    </div>
+
+    <!-- Menu (Center) - hidden on small screens -->
+    <nav class="d-none d-md-block">
+      <ul class="d-flex gap-5 list-unstyled mb-0 fw-bold">
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="menu-link"
+            >الرئيسية</a
+          >
+        </li>
+        <li><a routerLink="/about-us" routerLinkActive="active" class="menu-link">من نحن</a></li>
+        <li><a routerLink="/our-services" routerLinkActive="active" class="menu-link">خدماتنا</a></li>
+        <li>
+          <a routerLink="/contact-us" routerLinkActive="active" class="menu-link">تواصل معنا</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CTA (Left in RTL) - hidden on small/medium -->
+    <div class="cta-container d-none d-lg-block">
+      <button class="cta1">احجز استشارة تسويقية</button>
+    </div>
+
+    <!-- Mobile menu button - visible only on small screens (below md) -->
+    <div class="d-md-none">
+      <button
+        class="btn btn-link mobile-menu-btn text-white p-2"
+        style="font-size: 25px;"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasMobileMenu"
+        aria-controls="offcanvasMobileMenu"
+        aria-label="فتح القائمة"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
   </div>
 
-  <!-- Menu (Center) -->
-  <nav class="d-none d-md-block">
-    <ul class="d-flex gap-5 list-unstyled mb-0 fw-bold">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="menu-link">الرئيسية</a></li>
+  <!-- Mobile offcanvas: overlay only, opens on button click. Not a flex child so it overlays correctly. -->
+  <div
+    class="offcanvas offcanvas-end"
+    tabindex="-1"
+    id="offcanvasMobileMenu"
+    aria-labelledby="offcanvasMobileMenuLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMobileMenuLabel">منارة تقودك للنجاح</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        data-bs-target="#offcanvasMobileMenu"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="d-flex flex-column gap-4 list-unstyled mb-0 fw-bold">
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="menu-link"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasMobileMenu"
+            >الرئيسية</a
+          >
+        </li>
+        <li><a routerLink="/about-us" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">من نحن</a></li>
+        <li><a routerLink="/our-services" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">خدماتنا</a></li>
+        <li>
+          <a routerLink="/contact-us" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">تواصل معنا</a>
+        </li>
+      </ul>
+      <button class="cta1 mt-3 w-100">احجز استشارة تسويقية</button>
+    </div>
+  </div>
+  <!-- <div
+    class="offcanvas offcanvas-start"
+    data-bs-scroll="true"
+    tabindex="-1"
+    id="offcanvasWithBothOptions"
+    aria-labelledby="offcanvasWithBothOptionsLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">وكالة المنارة</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="d-flex flex-column gap-5 list-unstyled mb-0 fw-bold">
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="menu-link"
+          >الرئيسية</a
+        >
+      </li>
       <li><a routerLink="/about-us" routerLinkActive="active" class="menu-link">من نحن</a></li>
       <li><a routerLink="/our-services" routerLinkActive="active" class="menu-link">خدماتنا</a></li>
       <li>
         <a routerLink="/contact-us" routerLinkActive="active" class="menu-link">تواصل معنا</a>
       </li>
     </ul>
-  </nav>
-
-  <!-- CTA (Left in RTL) -->
-  <div class="cta-container d-none d-md-block">
-    <button class="cta1">احجز استشارة تسويقية</button>
-  </div>
+    </div>
+  </div> -->
 </header>

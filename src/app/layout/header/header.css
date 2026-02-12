@@ -39,3 +39,10 @@ nav {
   color: var(--color-purple);
   font-weight: 700;
 }
+
+/* Mobile menu button: hamburger visible on purple header */
+.mobile-menu-btn .navbar-toggler-icon {
+  filter: invert(1);
+  width: 1.5rem;
+  height: 1.5rem;
+}

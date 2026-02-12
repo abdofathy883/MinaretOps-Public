@@ -1,25 +1,25 @@
-main {
+/* main {
   position: relative;
-  /* Ensure min-height to prevent unsightly collapse during transition */
+  Ensure min-height to prevent unsightly collapse during transition
   min-height: 80vh;
   view-transition-name: main-content;
-}
+} */
 
 /* Target the div wrapper around router-outlet */
-main > div {
+/* main > div {
   position: relative;
   width: 100%;
   overflow-x: hidden;
-}
+} */
 
-::view-transition-old(main-content) {
+/* ::view-transition-old(main-content) {
   animation: 300ms ease-in-out both slide-out-right;
 }
 
 ::view-transition-new(main-content) {
   animation: 300ms ease-in-out both slide-in-from-left;
-}
-
+} */
+/* 
 @keyframes slide-out-right {
   from { transform: translateX(0); }
   to { transform: translateX(100%); }
@@ -28,4 +28,4 @@ main > div {
 @keyframes slide-in-from-left {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
-}
+} */

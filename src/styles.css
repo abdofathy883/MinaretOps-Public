@@ -1,8 +1,8 @@
 /* Custom color variables matching the design */
-:host {
+/* :host {
   display: block;
   overflow: hidden;
-}
+} */
 
 :root {
   --color-lime: #96ef0d;
@@ -18,6 +18,6 @@ body, input, button, select, textarea {
   background-color: white;
 }
 
-.container{
+/* .container{
   width: 1200px;
-}
+} */
