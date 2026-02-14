@@ -15,22 +15,59 @@
 
   <div class="row">
     <div class="col-12 col-lg-6 mb-3">
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <!-- <ngx-invisible-recaptcha #captchaElem
+          [siteKey]="siteKey"
+          formControlName="recaptcha">
+        </ngx-invisible-recaptcha> -->
+        <!-- <ngx-invisible-recaptcha #captchaElem
+          [siteKey]="siteKey"
+          (reset)="handleReset()"
+          (ready)="handleReady()"
+          (load)="handleLoad()"
+          (success)="handleSuccess($event)"
+          formControlName="recaptcha">
+        </ngx-invisible-recaptcha> -->
         <div class="mb-3">
           <label for="name" class="form-label">الاسم</label>
-          <input type="text" name="name" id="name" class="form-control" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            formControlName="fullName"
+          />
         </div>
         <div class="mb-3">
           <label for="phoneNumber" class="form-label">الهاتف</label>
-          <input type="tel" name="phoneNumber" id="phoneNumber" class="form-control" />
+          <input
+            type="tel"
+            name="phoneNumber"
+            id="phoneNumber"
+            class="form-control"
+            formControlName="phoneNumber"
+          />
         </div>
+        <input type="text" class="form-control" formControlName="website" style="display: none;">
         <div class="mb-3">
           <label for="email" class="form-label">البريد الإلكتروني</label>
-          <input type="email" name="email" id="email" class="form-control" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            formControlName="email"
+          />
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">رسالتك</label>
-          <textarea name="message" id="message" class="form-control" rows="3"></textarea>
+          <textarea
+            name="message"
+            id="message"
+            class="form-control"
+            rows="3"
+            formControlName="message"
+          ></textarea>
         </div>
 
         <button class="submit-btn">
@@ -105,7 +142,9 @@
         </p>
         <p class="text-grey">
           ايميل
-          <a href="mailto:theminaretagency@gmail.com" class="text-grey">theminaretagency@gmail.com</a>
+          <a href="mailto:theminaretagency@gmail.com" class="text-grey"
+            >theminaretagency@gmail.com</a
+          >
         </p>
       </div>
     </div>

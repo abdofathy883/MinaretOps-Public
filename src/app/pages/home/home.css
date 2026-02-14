@@ -14,22 +14,50 @@
   background-color: var(--color-orange);
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 6px 12px;
+  border-radius: 25px;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .cta2 {
   background-color: white;
   color: var(--color-purple);
   border: navajowhite;
-  border-radius: 6px;
-  padding: 6px 10px;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .wave{
   position: absolute;
   bottom: -2px;
   width: 100%;
+}
+
+.purple-cta{
+  background-color: var(--color-purple);
+  color: white;
+  border-radius: 35px;
+  width: 75%;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.rounded-cta{
+  background-color: var(--color-orange);
+  color: white;
+  border-radius: 200px;
+  width: 10%;
+  text-align: center;
+  padding: 10px;
+}
+
+.rounded-cta>i{
+  font-size: 20px;
 }
 
 .dashed-line{
@@ -79,6 +107,8 @@
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
 .cat-btn {

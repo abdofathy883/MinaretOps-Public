@@ -15,6 +15,7 @@ header {
   padding: 10px 20px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 ul {
