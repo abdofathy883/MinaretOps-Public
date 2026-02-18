@@ -11,6 +11,7 @@ const SEO_KEY = makeStateKey<any>('seo-data');
   providedIn: 'root',
 })
 export class Seo {
+  private endpoint: string = 'seo'
   private cache = new Map<string, ISeoPage>();
 
   private api = inject(Api);
@@ -20,7 +21,7 @@ export class Seo {
   private platformId = inject(PLATFORM_ID);
 
 
-  getSeo(route: string): Observable<ISeoPage | null> {
+  getSeo(route: string, lang: string = 'ar'): Observable<ISeoPage | null> {
     // Check in-memory cache first
     if (this.cache.has(route)) {
       const data = this.cache.get(route)!;
@@ -38,7 +39,7 @@ export class Seo {
     }
 
     // Fetch from backend API
-    return this.api.get<ISeoPage>(`seo?route=${route}`).pipe(
+    return this.api.get<ISeoPage>(`${this.endpoint}/${lang}/${route}`).pipe(
       tap(data => {
         this.cache.set(route, data);
         this.applySeo(data);
