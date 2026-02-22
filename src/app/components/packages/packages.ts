@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Packages {
 
+  subscribe(){
+    window.location.assign("https://wa.me/+966557742801");
+  }
 }

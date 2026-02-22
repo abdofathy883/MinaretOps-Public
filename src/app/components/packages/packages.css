@@ -5,7 +5,16 @@
   background: none;
   /* transition: 0.5s ease-in; */
   margin-bottom: 15px;
+  &.active {
+    background: linear-gradient(#7b11f9, #7922d8, #3636b2);
+    color: white;
+    border-color: transparent;
+  }
   &:hover {
+    background: linear-gradient(#7b11f9, #7922d8, #3636b2);
+    color: white;
+  }
+  &:active{
     background: linear-gradient(#7b11f9, #7922d8, #3636b2);
     color: white;
   }
@@ -22,6 +31,9 @@
   border: none;
   border-radius: 15px;
   background-color: rgba(241, 239, 255, 1);
+  color: var(--color-purple);
+  font-size: 18px;
+  font-weight: 500;
   padding: 5px;
 }
 
@@ -30,7 +42,21 @@
   color: white;
 }
 
-.tab-pane{
+.tab-content {
+  width: 100%;
   max-width: 1000px;
+  min-width: min(100%, 1000px);
+  margin-inline: auto;
+}
+
+.tab-pane {
+  width: 100%;
+  min-width: 0;
   padding: 15px 0;
+}
+
+/* Equal-width columns so both panes in a row match */
+.tab-pane .row > .col-md-6 {
+  flex: 1 1 0%;
+  min-width: 0;
 }

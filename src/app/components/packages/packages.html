@@ -45,12 +45,12 @@
       <li class="nav-item" role="presentation">
         <button
           class="pack-btn"
-          id="pills-disabled-tab"
+          id="pills-branding-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-disabled"
+          data-bs-target="#pills-branding"
           type="button"
           role="tab"
-          aria-controls="pills-disabled"
+          aria-controls="pills-branding"
           aria-selected="false"
         >
           باقات الهوية البصرية ( Branding )
@@ -59,12 +59,12 @@
       <li class="nav-item" role="presentation">
         <button
           class="pack-btn"
-          id="pills-disabled-tab"
+          id="pills-seo-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-disabled"
+          data-bs-target="#pills-seo"
           type="button"
           role="tab"
-          aria-controls="pills-disabled"
+          aria-controls="pills-seo"
           aria-selected="false"
         >
           خدمات السيو (SEO)
@@ -73,12 +73,12 @@
       <li class="nav-item" role="presentation">
         <button
           class="pack-btn"
-          id="pills-disabled-tab"
+          id="pills-video-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-disabled"
+          data-bs-target="#pills-video"
           type="button"
           role="tab"
-          aria-controls="pills-disabled"
+          aria-controls="pills-video"
           aria-selected="false"
         >
           باقات الفيديو والموشن جرافيك
@@ -87,12 +87,12 @@
       <li class="nav-item" role="presentation">
         <button
           class="pack-btn"
-          id="pills-disabled-tab"
+          id="pills-website-tab"
           data-bs-toggle="pill"
-          data-bs-target="#pills-disabled"
+          data-bs-target="#pills-website"
           type="button"
           role="tab"
-          aria-controls="pills-disabled"
+          aria-controls="pills-website"
           aria-selected="false"
         >
           تصميم وتطوير المواقع الإلكترونية
@@ -108,31 +108,35 @@
         tabindex="0"
       >
         <div class="row">
-          <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">الباقة الأساسية</h3>
-            <ul>
-              <li>7 منشورات (تصاميم ثابتة + محتوى)</li>
-              <li>منها 3 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
-              <li>النشر بمعدل مرتين أسبوعيًا.</li>
-              <li>متابعة وجدولة النشر بشكل منتظم.</li>
-            </ul>
+          <div class="col-12 col-md-6 d-flex flex-column justify-content-around">
+            <div>
+              <h3 class="fw-bold mb-4">الباقة الأساسية</h3>
+              <ul>
+                <li>7 منشورات (تصاميم ثابتة + محتوى)</li>
+                <li>منها 3 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
+                <li>النشر بمعدل مرتين أسبوعيًا.</li>
+                <li>متابعة وجدولة النشر بشكل منتظم.</li>
+              </ul>
+  
+            </div>
+            <div>
+              <p class="fw-bolder text-center">1200 ريال/شهرياً</p>
+              <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            </div>
 
-            <p class="fw-bolder">1200 ريال/شهرياً</p>
-
-            <button class="cta">اشترك الان</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
             <h3 class="fw-bold mb-4">الباقة المتميزة الأفق</h3>
             <ul>
-              <li>7 منشورات (تصاميم ثابتة + محتوى)</li>
-              <li>منها 3 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
-              <li>النشر بمعدل مرتين أسبوعيًا.</li>
+              <li>15 منشور (تصاميم ثابتة + محتوى).</li>
+              <li>منها 6 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
+              <li>النشر من 3 إلى 4 مرات أسبوعيًا.</li>
               <li>متابعة وجدولة النشر بشكل منتظم.</li>
             </ul>
 
-            <p class="fw-bolder text-center">1200 ريال/شهرياً</p>
+            <p class="fw-bolder text-center">2500 ريال/شهرياً</p>
 
-            <button class="cta dark-cta">اشترك الان</button>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
           </div>
         </div>
       </div>
@@ -143,7 +147,24 @@
         aria-labelledby="pills-profile-tab"
         tabindex="0"
       >
-        ...
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">باقة 100 ألف مشاهدة</h3>
+            <ul>
+              <li>تصميم بوست + 100 ألف مشاهدة على منصة من اختيارك (سناب شات – تيك توك – إنستجرام): 795 ريال.</li>
+              <li>تصميم ريل (موشن/مونتاج) + 100 ألف مشاهدة: 895 ريال.</li>
+            </ul>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">باقة 50 ألف مشاهدة</h3>
+            <ul>
+              <li>تصميم بوست + 50 ألف مشاهدة: 495 ريال.</li>
+              <li>تصميم ريل (موشن/مونتاج) + 50 ألف مشاهدة: 595 ريال.</li>
+            </ul>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
       </div>
       <div
         class="tab-pane fade"
@@ -152,16 +173,213 @@
         aria-labelledby="pills-contact-tab"
         tabindex="0"
       >
-        ...
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">باقة 10 تصاميم</h3>
+            <ul>
+              <li>تصاميم سوشيال ميديا ثابتة</li>
+              <li>هوية بصرية موحدة</li>
+              <li>2 تعديلات مجانية</li>
+            </ul>
+            <p class="fw-bolder">650 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">باقة 20 تصميم</h3>
+            <ul>
+              <li>تسليم خلال 10 أيام</li>
+              <li>صيغة PNG + JPG</li>
+              <li>2 تعديلات</li>
+            </ul>
+            <p class="fw-bolder text-center">1200 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <h3 class="fw-bold mb-4">باقة مخصصة "حسب الطلب"</h3>
+            <ul>
+              <li>بوست واحد: 70 – 120 ريال</li>
+              <li>تصميم رول أب: 170 – 250 ريال</li>
+              <li>تصميم بروشور: 190 – 340 ريال</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div
         class="tab-pane fade"
-        id="pills-disabled"
+        id="pills-branding"
         role="tabpanel"
-        aria-labelledby="pills-disabled-tab"
+        aria-labelledby="pills-branding-tab"
         tabindex="0"
       >
-        ...
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">باقة ستارت</h3>
+            <ul>
+              <li>خياران لشعار احترافي</li>
+              <li>ألوان وهوية بسيطة</li>
+              <li>تعديلان بحد أقصى</li>
+            </ul>
+            <p class="fw-bolder">300 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">باقة بيزنس</h3>
+            <ul>
+              <li>عدد 3 خيار لشعار احترافي + ألوان + خطوط</li>
+              <li>نماذج تطبيقات متنوعة</li>
+              <li>دليل هوية PDF</li>
+            </ul>
+            <p class="fw-bolder text-center">500 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <h3 class="fw-bold mb-4">باقة برو</h3>
+            <ul>
+              <li>عدد 5 خيارات متنوعة لشعار احترافي + ألوان + خطوط</li>
+              <li>هوية كاملة (30 عنصر كحد أقصى)</li>
+              <li>قوالب سوشيال</li>
+              <li>دليل براند كامل</li>
+            </ul>
+            <p class="fw-bolder">1000 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-seo"
+        role="tabpanel"
+        aria-labelledby="pills-seo-tab"
+        tabindex="0"
+      >
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">باقة أساسية</h3>
+            <ul>
+              <li>10 كلمات مستهدفة</li>
+              <li>تحسين أساسي On-page</li>
+              <li>رفع السرعة</li>
+              <li>مقالتين SEO</li>
+              <li>تقرير شهري</li>
+            </ul>
+            <p class="fw-bolder">800 ريال / شهر</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">باقة برو</h3>
+            <ul>
+              <li>20 كلمة</li>
+              <li>4 مقالات SEO</li>
+              <li>Backlinks آمنة</li>
+              <li>تقرير نمو + Dashboard</li>
+            </ul>
+            <p class="fw-bolder text-center">1500 ريال / شهر</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <h3 class="fw-bold mb-4">باقة قوية</h3>
+            <ul>
+              <li>+30 كلمة</li>
+              <li>8 مقالات شهريًا</li>
+              <li>تحسين كامل للموقع</li>
+              <li>متابعة يومية</li>
+            </ul>
+            <p class="fw-bolder">2500 ريال / شهر</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-video"
+        role="tabpanel"
+        aria-labelledby="pills-video-tab"
+        tabindex="0"
+      >
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">فيديو ريل موشن</h3>
+            <p class="mb-2">(تصميم+تحريك+صوت أو موسيقى)</p>
+            <p class="fw-bolder">300 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">باقة 4 ريلز موشن</h3>
+            <p class="mb-2">(تصميم+تحريك+صوت أو موسيقى)</p>
+            <p class="fw-bolder text-center">1100 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">فيديو موشن كامل – 90 ثانية</h3>
+            <p class="mb-2">فكرة + نص + رسم + صوت + موسيقى + تحريك</p>
+            <p class="fw-bolder">1000 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">فيديو مونتاج – 30–45 ثانية</h3>
+            <p class="fw-bolder text-center">150 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12">
+            <h3 class="fw-bold mb-4">باقة 5 فيديوهات مونتاج</h3>
+            <p class="fw-bolder">600 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-website"
+        role="tabpanel"
+        aria-labelledby="pills-website-tab"
+        tabindex="0"
+      >
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">موقع صفحة واحدة</h3>
+            <p class="fw-bolder">700 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">موقع تعريفي 5-7 صفحات</h3>
+            <ul>
+              <li>تصميم + برمجة</li>
+              <li>متجاوب</li>
+              <li>نموذج تواصل</li>
+              <li>تدريب على لوحة التحكم</li>
+            </ul>
+            <p class="fw-bolder text-center">2000 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 col-md-6">
+            <h3 class="fw-bold mb-4">موقع متكامل (WordPress)</h3>
+            <ul>
+              <li>8–10 صفحات</li>
+              <li>SEO جاهز</li>
+              <li>تدريب على لوحة التحكم</li>
+              <li>تحسين السرعة</li>
+            </ul>
+            <p class="fw-bolder">2500 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+          </div>
+          <div class="col-12 col-md-6 purplr-bg px-4 py-4">
+            <h3 class="fw-bold mb-4">متجر إلكتروني <br> (WooCommerce / Shopify)</h3>
+            <p class="fw-bolder text-center">3000 ريال</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
