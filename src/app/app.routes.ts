@@ -25,5 +25,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact').then((m) => m.Contact),
     resolve: { seo: seoResolver }
     // data: { animation: 'ContactPage' }
+  },
+  {
+    path: 'portfolio',
+    loadComponent: () => import('./pages/portfolio/portfolio').then((m) => m.Portfolio),
+    resolve: { seo: seoResolver }
   }
 ];

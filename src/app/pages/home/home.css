@@ -147,3 +147,48 @@
     width: 100%;
   }
 }
+
+/* Marquee Animation */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  background-color: #7922D8;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll-left 30s linear infinite;
+}
+
+.marquee-content img {
+  width: 120px;
+  height: 100px; /* Consistent height for logos */
+  flex-shrink: 0;
+  margin: 0 1rem;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.marquee-content img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* For continuous right direction if preferred later:
+@keyframes scroll-right {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+*/
