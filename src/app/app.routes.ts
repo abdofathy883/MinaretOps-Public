@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { seoResolver } from './core/resolvers/seo-resolver';
+import { RenderMode } from '@angular/ssr';
 
 export const routes: Routes = [
   {
