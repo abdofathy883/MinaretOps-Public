@@ -14,8 +14,8 @@ export class Services {
   private route = inject(ActivatedRoute);
   private seoService = inject(Seo);
 
-   ngOnInit(): void {
-     const seo = this.route.snapshot.data['seo'];
-     this.seoService.applySeo(seo);
-   }
+  ngOnInit(): void {
+    const seo = this.route.snapshot.data['seo'];
+    this.seoService.applySeo(seo);
+  }
 }
