@@ -1,0 +1,293 @@
+{
+    "home": "Home",
+    "about_us": "About Us",
+    "our_services": "Our Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "contact_us": "Contact Us",
+    "contact_button": "Contact Now",
+    "portfolio_hero_title": "Portfolio",
+    "all_work": "All Work",
+    "lets_contact": "Let's Contact",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "office_address": "Office Addresses",
+    "tech_support": "24/7 Technical Support",
+    "working_hours": "Working Hours",
+    "services": {
+        "title": "Services",
+        "breadcrumb": "Home - Services",
+        "stage1": {
+            "title": "Foundation and Strategy",
+            "item1_title": "Strategic Planning and Consulting:",
+            "item1_desc": "We design customized business and marketing strategies, focusing on digital direction, sustainable growth, and tangible results.",
+            "item2_title": "Market Research and Competitor Analysis:",
+            "item2_desc": "We analyze market trends, competitor performance, and define a clear space for you to lead instead of getting lost in the crowd.",
+            "item3_title": "Business Development Strategy and Operational Efficiency:",
+            "item3_desc": "We help you discover growth opportunities and new partnerships, and improve your internal operations to market and sell more efficiently and at a lower cost."
+        },
+        "stage2": {
+            "title": "Stage Two: Identity and Content",
+            "subtitle": "Before you speak, we make your voice clear.",
+            "item1_title": "Visual Identity and Logo Design:",
+            "item1_desc": "We build a unique visual identity that embodies the spirit of your brand and sets you apart in the market.",
+            "item2_title": "Graphic Design:",
+            "item2_desc": "We design visual materials (social, prints, banners…) that convey your message clearly and attractively.",
+            "item3_title": "Content Strategy and SEO:",
+            "item3_desc": "We develop content that reflects your brand's voice, and use SEO to increase your presence in results and drive qualified traffic to your site."
+        },
+        "stage3": {
+            "title": "Spread, Interaction, and Community Building",
+            "subtitle": "We spread content in various ways to build a strong relationship with your audience.",
+            "item1_title": "Social Media Management:",
+            "item1_desc": "A specialized team in account management, posting at the right times, interacting with the audience, and continuously following up with you.",
+            "item2_title": "Email Marketing:",
+            "item2_desc": "We design customized email campaigns that build a relationship with your customers and constantly remind them of your offer and value.",
+            "item3_title": "WhatsApp Marketing (WhatsApp Wave):",
+            "item3_desc": "We activate direct communication with your audience through interactive messages and offers designed specifically for them."
+        },
+        "stage4": {
+            "title": "Advertising and Achieving Results",
+            "subtitle": "What happens behind the screens turns into numbers and sales here.",
+            "item1_title": "PPC Ads and Paid Campaigns:",
+            "item1_desc": "We manage PPC campaigns that target the right audience and bring immediate visitors and high-quality conversions.",
+            "item2_title": "Social Media Ads:",
+            "item2_desc": "We launch innovative ads on social platforms and retarget previous visitors to turn their interest into a clear purchasing decision.",
+            "item3_title": "Analysis and Conversion Rate Optimization (CRO):",
+            "item3_desc": "We monitor performance, analyze data, and improve the user experience on your site to increase the number of actual customers from every visit."
+        },
+        "stage5": {
+            "title": "Digital Expansion and Building Interfaces",
+            "subtitle1": "Is your business ready for development?",
+            "subtitle2": "We open the doors of digital development for you with customized technical services.",
+            "item1_title": "Website Design and Development:",
+            "item1_desc": "We build responsive and attractive websites that reflect your brand identity and provide an ideal experience for your visitors.",
+            "item2_title": "Mobile App Design and Development:",
+            "item2_desc": "We develop your presence through websites and apps, ensuring your brand appears professionally at every touchpoint with your audience.",
+            "item3_title": "E-commerce Design and Construction:",
+            "item3_desc": "We prepare a digital structure that helps you sell online effectively, from the store to campaigns that bring traffic and sales (WordPress, stores, and growth-friendly SEO)."
+        }
+    },
+    "about": {
+        "title": "About Us",
+        "breadcrumb": "Home - About Us",
+        "who_we_are_title": "Who We Are",
+        "who_we_are_desc": "In the midst of market congestion and increased competition, your presence on the Internet is no longer enough. You need a guide, a lighthouse to guide you in this dark sea. We were founded to be this guide... to accompany your business moment by moment and lead it towards success.",
+        "why_lighthouse_title": "Why did we choose to be 'The Lighthouse'?",
+        "why_lighthouse_desc": "In the past, the lighthouse guided ships lost at sea, lighting their way through darkness and fog. <br /> Today, the market has become like the sea... <br /> and ships have become startups, small and medium enterprises searching for their way to success. <br /> This is where our choice of 'The Lighthouse' came from.",
+        "goals_title": "Our Goals",
+        "goals_list": [
+            "Supporting startups, small and medium enterprises in their journey towards digital transformation.",
+            "Linking every marketing effort to a specific goal that can be measured and developed.",
+            "Building long-term partnerships, not seasonal cooperation that ends with the end of a campaign.",
+            "Providing marketing solutions that focus on results, not just appearances."
+        ],
+        "vision_title": "Our Vision",
+        "vision_desc": "We believe that business prosperity means societal prosperity, whether we are the spark of the beginning or partners in creating a society full of creativity and innovation.",
+        "mission_title": "Our Mission",
+        "mission_desc": "Our mission goes beyond just providing marketing services; we exist to provide guidance, instill transparency, and bear full responsibility for the results we create with our clients.",
+        "contact_title": "Contact Us",
+        "contact_desc1": "Are you ready for us to be a guide for your brand in the market?",
+        "contact_desc2": "We are happy to get to know your business, hear your goals, and discuss ways of cooperation.",
+        "whatsapp_btn": "Contact us via WhatsApp"
+    },
+    "home_page": {
+        "hero_title_part1": "Almnara is the sea guide",
+        "hero_title_part2": "and we are the market guide...",
+        "hero_desc": "In a market crowded with competitors, your digital presence alone is not enough... because you need a partner to lead you to success.",
+        "hero_cta1": "Book a consultation now",
+        "hero_cta2": "See Our Services",
+        "learn_more_services": "Learn more about our services",
+        "why_lighthouse": {
+            "title": "Why <span class=\"fw-bolder\">Almnara?</span>",
+            "item1": "We are not just a marketing agency, but a<br />partner who accompanies you on your journey.",
+            "item2": "We work according to a clear plan that leads us<br />together towards achieving goals.",
+            "item3": "We link every step to a specific,<br />measurable, and developable goal."
+        },
+        "clients_issues": {
+            "title": "Potential Customer Problems",
+            "subtitle": "The problem is not in marketing… but in the absence of a plan and clarity of direction",
+            "agencies_title": "Digital Marketing Agencies",
+            "agencies_list": [
+                "Advertising campaigns without a clear goal or real measurement indicators",
+                "Beautiful content and designs but they do not achieve their primary goal, which is achieving sales",
+                "Changing the content display style every period without a fixed strategy or clear path",
+                "Focusing on the number of designs and videos instead of focusing on the quality of results."
+            ],
+            "lighthouse_list": [
+                "We define where you want to go, then we draw a customized strategy for you, not for everyone",
+                "We precisely define our advertising campaign goals to preserve your budget and use it to achieve the best results",
+                "We care about quality in every design and every piece of content written to achieve the best results and returns on your investment",
+                "Integrated creative services and a team available around the clock to help your business grow"
+            ],
+            "learn_more": "Learn more about our marketing services ... see how we work with our clients"
+        },
+        "how_we_work": {
+            "title": "How we work?",
+            "desc1": "The intensity of the glow is what lights your path, and our strength in marketing is what leads you to success",
+            "desc2": "Know your correct direction with the Lighthouse...",
+            "items": [
+                {
+                    "title": "Understanding your business",
+                    "desc": "We dive into understanding the essence of your brand, vision, and goals to be able to customize a strategy specifically for you."
+                },
+                {
+                    "title": "Formulating the success strategy",
+                    "desc": "We build a customized strategy for your business, to serve as the roadmap to reach your goals."
+                },
+                {
+                    "title": "Content development",
+                    "desc": "Our team transforms the strategy into content, designs, and videos to deliver messages to your audience that set you apart from your competitors."
+                },
+                {
+                    "title": "Implementation and application",
+                    "desc": "We start implementing plans, managing accounts, and launching campaigns to reach the best results."
+                },
+                {
+                    "title": "Follow-up and continuous development",
+                    "desc": "Because the market moves quickly, we must be ready to adjust and develop strategies to maintain the growth of your business."
+                },
+                {
+                    "title": "Growth and success",
+                    "desc": "Our goal from day one is to achieve the best for your business; therefore, we always look for new opportunities to enhance growth to a better level."
+                },
+                {
+                    "title": "Our partnership is ongoing",
+                    "desc": "Our journey with you does not end, because our goal is to build a long-term relationship, remaining your marketing partner."
+                }
+            ],
+            "free_consultation": "Book your free consultation"
+        },
+        "partners": {
+            "title": "Partners in Success",
+            "subtitle": "We are proud to have served dozens of clients over the 5 years since our founding"
+        },
+        "packages_section": {
+            "title": "Packages",
+            "subtitle": "Social media management packages"
+        }
+    },
+    "packages": {
+        "tabs": {
+            "social": "Social Media Management Packages",
+            "individual": "Individual Package Offers (includes sponsored ads)",
+            "design": "Design Packages",
+            "branding": "Visual Identity (Branding) Packages",
+            "seo": "SEO Services",
+            "video": "Video and Motion Graphics Packages",
+            "website": "Website Design and Development"
+        },
+        "subscribe": "Subscribe Now",
+        "currency": "SAR",
+        "monthly": "/month",
+        "basic": "Basic Package",
+        "premium": "Premium Horizon Package",
+        "social_basic_list": [
+            "7 posts (static designs + content)",
+            "Including 3 reels (motion or montage 15–20 seconds).",
+            "Posting twice a week.",
+            "Regular posting follow-up and scheduling."
+        ],
+        "social_premium_list": [
+            "15 posts (static designs + content).",
+            "Including 6 reels (motion or montage 15–20 seconds).",
+            "Posting 3 to 4 times a week.",
+            "Regular posting follow-up and scheduling."
+        ],
+        "views_100k": "100,000 Views Package",
+        "views_100k_list": [
+            "Post design + 100,000 views on a platform of your choice (Snapchat – TikTok – Instagram): 795 SAR.",
+            "Reel design (motion/montage) + 100,000 views: 895 SAR."
+        ],
+        "views_50k": "50,000 Views Package",
+        "views_50k_list": [
+            "Post design + 50,000 views: 495 SAR.",
+            "Reel design (motion/montage) + 50,000 views: 595 SAR."
+        ],
+        "design_10": "10 Designs Package",
+        "design_10_list": [
+            "Static social media designs",
+            "Unified visual identity",
+            "2 free revisions"
+        ],
+        "design_20": "20 Designs Package",
+        "design_20_list": [
+            "Delivery within 10 days",
+            "PNG + JPG formats",
+            "2 revisions"
+        ],
+        "custom_design": "Custom Package 'On Demand'",
+        "custom_design_list": [
+            "One post: 70 – 120 SAR",
+            "Roll-up design: 170 – 250 SAR",
+            "Brochure design: 190 – 340 SAR"
+        ],
+        "branding_start": "Start Package",
+        "branding_start_list": [
+            "Two professional logo options",
+            "Simple colors and identity",
+            "Up to 2 revisions"
+        ],
+        "branding_business": "Business Package",
+        "branding_business_list": [
+            "3 professional logo options + colors + fonts",
+            "Various application models",
+            "PDF identity guide"
+        ],
+        "branding_pro": "Pro Package",
+        "branding_pro_list": [
+            "5 professional logo options + colors + fonts",
+            "Full identity (up to 30 elements)",
+            "Social media templates",
+            "Full brand guide"
+        ],
+        "seo_basic": "Basic Package",
+        "seo_basic_list": [
+            "10 target keywords",
+            "Basic On-page optimization",
+            "Speed boost",
+            "Two SEO articles",
+            "Monthly report"
+        ],
+        "seo_pro": "Pro Package",
+        "seo_pro_list": [
+            "20 keywords",
+            "4 SEO articles",
+            "Safe Backlinks",
+            "Growth report + Dashboard"
+        ],
+        "seo_strong": "Strong Package",
+        "seo_strong_list": [
+            "+30 keywords",
+            "8 articles per month",
+            "Full site optimization",
+            "Daily follow-up"
+        ],
+        "video_reel_motion": "Motion Reel Video",
+        "video_reel_motion_desc": "(design+animation+voiceover/music)",
+        "video_4_reels": "4 Motion Reels Package",
+        "video_motion_90": "Full Motion Video – 90 Seconds",
+        "video_motion_90_desc": "Idea + script + drawing + voice + music + animation",
+        "video_edit_30": "Montage Video – 30–45 Seconds",
+        "video_5_edit": "5 Montage Videos Package",
+        "web_one_page": "One Page Website",
+        "web_intro": "Introductory Website 5-7 Pages",
+        "web_intro_list": [
+            "Design + Programming",
+            "Responsive",
+            "Contact form",
+            "Control panel training"
+        ],
+        "web_wordpress": "Integrated Website (WordPress)",
+        "web_wordpress_list": [
+            "8–10 pages",
+            "SEO ready",
+            "Control panel training",
+            "Speed optimization"
+        ],
+        "web_ecommerce": "E-commerce Store <br> (WooCommerce / Shopify)"
+    }
+}

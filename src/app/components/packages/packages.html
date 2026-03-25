@@ -11,7 +11,7 @@
           aria-controls="pills-home"
           aria-selected="true"
         >
-          باقات إدارة صفحات التواصل الاجتماعي
+          {{ 'packages.tabs.social' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -25,7 +25,7 @@
           aria-controls="pills-profile"
           aria-selected="false"
         >
-          عروض الباقات الفردية (شاملة إعلان ممول)
+          {{ 'packages.tabs.individual' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -39,7 +39,7 @@
           aria-controls="pills-contact"
           aria-selected="false"
         >
-          باقات التصميم
+          {{ 'packages.tabs.design' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -53,7 +53,7 @@
           aria-controls="pills-branding"
           aria-selected="false"
         >
-          باقات الهوية البصرية ( Branding )
+          {{ 'packages.tabs.branding' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -67,7 +67,7 @@
           aria-controls="pills-seo"
           aria-selected="false"
         >
-          خدمات السيو (SEO)
+          {{ 'packages.tabs.seo' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -81,7 +81,7 @@
           aria-controls="pills-video"
           aria-selected="false"
         >
-          باقات الفيديو والموشن جرافيك
+          {{ 'packages.tabs.video' | translate }}
         </button>
       </li>
       <li class="nav-item" role="presentation">
@@ -95,7 +95,7 @@
           aria-controls="pills-website"
           aria-selected="false"
         >
-          تصميم وتطوير المواقع الإلكترونية
+          {{ 'packages.tabs.website' | translate }}
         </button>
       </li>
     </ul>
@@ -110,33 +110,27 @@
         <div class="row">
           <div class="col-12 col-md-6 d-flex flex-column justify-content-around">
             <div>
-              <h3 class="fw-bold mb-4">الباقة الأساسية</h3>
+              <h3 class="fw-bold mb-4">{{ 'packages.basic' | translate }}</h3>
               <ul>
-                <li>7 منشورات (تصاميم ثابتة + محتوى)</li>
-                <li>منها 3 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
-                <li>النشر بمعدل مرتين أسبوعيًا.</li>
-                <li>متابعة وجدولة النشر بشكل منتظم.</li>
+                <li *ngFor="let item of ('packages.social_basic_list' | translate)">{{ item }}</li>
               </ul>
   
             </div>
             <div>
-              <p class="fw-bolder text-center">1200 ريال/شهرياً</p>
-              <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+              <p class="fw-bolder text-center">1200 {{ 'packages.currency' | translate }}{{ 'packages.monthly' | translate }}</p>
+              <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
             </div>
 
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">الباقة المتميزة الأفق</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.premium' | translate }}</h3>
             <ul>
-              <li>15 منشور (تصاميم ثابتة + محتوى).</li>
-              <li>منها 6 ريلز (موشن أو مونتاج 15–20 ثانية).</li>
-              <li>النشر من 3 إلى 4 مرات أسبوعيًا.</li>
-              <li>متابعة وجدولة النشر بشكل منتظم.</li>
+                <li *ngFor="let item of ('packages.social_premium_list' | translate)">{{ item }}</li>
             </ul>
 
-            <p class="fw-bolder text-center">2500 ريال/شهرياً</p>
+            <p class="fw-bolder text-center">2500 {{ 'packages.currency' | translate }}{{ 'packages.monthly' | translate }}</p>
 
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>
@@ -149,20 +143,18 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">باقة 100 ألف مشاهدة</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.views_100k' | translate }}</h3>
             <ul>
-              <li>تصميم بوست + 100 ألف مشاهدة على منصة من اختيارك (سناب شات – تيك توك – إنستجرام): 795 ريال.</li>
-              <li>تصميم ريل (موشن/مونتاج) + 100 ألف مشاهدة: 895 ريال.</li>
+              <li *ngFor="let item of ('packages.views_100k_list' | translate)">{{ item }}</li>
             </ul>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">باقة 50 ألف مشاهدة</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.views_50k' | translate }}</h3>
             <ul>
-              <li>تصميم بوست + 50 ألف مشاهدة: 495 ريال.</li>
-              <li>تصميم ريل (موشن/مونتاج) + 50 ألف مشاهدة: 595 ريال.</li>
+              <li *ngFor="let item of ('packages.views_50k_list' | translate)">{{ item }}</li>
             </ul>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>
@@ -175,33 +167,27 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">باقة 10 تصاميم</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.design_10' | translate }}</h3>
             <ul>
-              <li>تصاميم سوشيال ميديا ثابتة</li>
-              <li>هوية بصرية موحدة</li>
-              <li>2 تعديلات مجانية</li>
+              <li *ngFor="let item of ('packages.design_10_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">650 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">650 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">باقة 20 تصميم</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.design_20' | translate }}</h3>
             <ul>
-              <li>تسليم خلال 10 أيام</li>
-              <li>صيغة PNG + JPG</li>
-              <li>2 تعديلات</li>
+              <li *ngFor="let item of ('packages.design_20_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder text-center">1200 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <p class="fw-bolder text-center">1200 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12">
-            <h3 class="fw-bold mb-4">باقة مخصصة "حسب الطلب"</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.custom_design' | translate }}</h3>
             <ul>
-              <li>بوست واحد: 70 – 120 ريال</li>
-              <li>تصميم رول أب: 170 – 250 ريال</li>
-              <li>تصميم بروشور: 190 – 340 ريال</li>
+              <li *ngFor="let item of ('packages.custom_design_list' | translate)">{{ item }}</li>
             </ul>
           </div>
         </div>
@@ -215,37 +201,30 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">باقة ستارت</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.branding_start' | translate }}</h3>
             <ul>
-              <li>خياران لشعار احترافي</li>
-              <li>ألوان وهوية بسيطة</li>
-              <li>تعديلان بحد أقصى</li>
+              <li *ngFor="let item of ('packages.branding_start_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">300 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">300 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">باقة بيزنس</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.branding_business' | translate }}</h3>
             <ul>
-              <li>عدد 3 خيار لشعار احترافي + ألوان + خطوط</li>
-              <li>نماذج تطبيقات متنوعة</li>
-              <li>دليل هوية PDF</li>
+              <li *ngFor="let item of ('packages.branding_business_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder text-center">500 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <p class="fw-bolder text-center">500 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12">
-            <h3 class="fw-bold mb-4">باقة برو</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.branding_pro' | translate }}</h3>
             <ul>
-              <li>عدد 5 خيارات متنوعة لشعار احترافي + ألوان + خطوط</li>
-              <li>هوية كاملة (30 عنصر كحد أقصى)</li>
-              <li>قوالب سوشيال</li>
-              <li>دليل براند كامل</li>
+              <li *ngFor="let item of ('packages.branding_pro_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">1000 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">1000 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>
@@ -258,40 +237,30 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">باقة أساسية</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.seo_basic' | translate }}</h3>
             <ul>
-              <li>10 كلمات مستهدفة</li>
-              <li>تحسين أساسي On-page</li>
-              <li>رفع السرعة</li>
-              <li>مقالتين SEO</li>
-              <li>تقرير شهري</li>
+              <li *ngFor="let item of ('packages.seo_basic_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">800 ريال / شهر</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">800 {{ 'packages.currency' | translate }} {{ 'packages.monthly' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">باقة برو</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.seo_pro' | translate }}</h3>
             <ul>
-              <li>20 كلمة</li>
-              <li>4 مقالات SEO</li>
-              <li>Backlinks آمنة</li>
-              <li>تقرير نمو + Dashboard</li>
+              <li *ngFor="let item of ('packages.seo_pro_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder text-center">1500 ريال / شهر</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <p class="fw-bolder text-center">1500 {{ 'packages.currency' | translate }} {{ 'packages.monthly' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12">
-            <h3 class="fw-bold mb-4">باقة قوية</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.seo_strong' | translate }}</h3>
             <ul>
-              <li>+30 كلمة</li>
-              <li>8 مقالات شهريًا</li>
-              <li>تحسين كامل للموقع</li>
-              <li>متابعة يومية</li>
+              <li *ngFor="let item of ('packages.seo_strong_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">2500 ريال / شهر</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">2500 {{ 'packages.currency' | translate }} {{ 'packages.monthly' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>
@@ -304,36 +273,36 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">فيديو ريل موشن</h3>
-            <p class="mb-2">(تصميم+تحريك+صوت أو موسيقى)</p>
-            <p class="fw-bolder">300 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.video_reel_motion' | translate }}</h3>
+            <p class="mb-2">{{ 'packages.video_reel_motion_desc' | translate }}</p>
+            <p class="fw-bolder">300 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">باقة 4 ريلز موشن</h3>
-            <p class="mb-2">(تصميم+تحريك+صوت أو موسيقى)</p>
-            <p class="fw-bolder text-center">1100 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.video_4_reels' | translate }}</h3>
+            <p class="mb-2">{{ 'packages.video_reel_motion_desc' | translate }}</p>
+            <p class="fw-bolder text-center">1100 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">فيديو موشن كامل – 90 ثانية</h3>
-            <p class="mb-2">فكرة + نص + رسم + صوت + موسيقى + تحريك</p>
-            <p class="fw-bolder">1000 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.video_motion_90' | translate }}</h3>
+            <p class="mb-2">{{ 'packages.video_motion_90_desc' | translate }}</p>
+            <p class="fw-bolder">1000 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">فيديو مونتاج – 30–45 ثانية</h3>
-            <p class="fw-bolder text-center">150 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.video_edit_30' | translate }}</h3>
+            <p class="fw-bolder text-center">150 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12">
-            <h3 class="fw-bold mb-4">باقة 5 فيديوهات مونتاج</h3>
-            <p class="fw-bolder">600 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.video_5_edit' | translate }}</h3>
+            <p class="fw-bolder">600 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>
@@ -346,38 +315,32 @@
       >
         <div class="row">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">موقع صفحة واحدة</h3>
-            <p class="fw-bolder">700 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4">{{ 'packages.web_one_page' | translate }}</h3>
+            <p class="fw-bolder">700 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">موقع تعريفي 5-7 صفحات</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.web_intro' | translate }}</h3>
             <ul>
-              <li>تصميم + برمجة</li>
-              <li>متجاوب</li>
-              <li>نموذج تواصل</li>
-              <li>تدريب على لوحة التحكم</li>
+              <li *ngFor="let item of ('packages.web_intro_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder text-center">2000 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <p class="fw-bolder text-center">2000 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-12 col-md-6">
-            <h3 class="fw-bold mb-4">موقع متكامل (WordPress)</h3>
+            <h3 class="fw-bold mb-4">{{ 'packages.web_wordpress' | translate }}</h3>
             <ul>
-              <li>8–10 صفحات</li>
-              <li>SEO جاهز</li>
-              <li>تدريب على لوحة التحكم</li>
-              <li>تحسين السرعة</li>
+              <li *ngFor="let item of ('packages.web_wordpress_list' | translate)">{{ item }}</li>
             </ul>
-            <p class="fw-bolder">2500 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta">اشترك الان</button>
+            <p class="fw-bolder">2500 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
           <div class="col-12 col-md-6 purplr-bg px-4 py-4">
-            <h3 class="fw-bold mb-4">متجر إلكتروني <br> (WooCommerce / Shopify)</h3>
-            <p class="fw-bolder text-center">3000 ريال</p>
-            <button type="button" (click)="subscribe()" class="cta dark-cta">اشترك الان</button>
+            <h3 class="fw-bold mb-4"><span [innerHTML]="'packages.web_ecommerce' | translate"></span></h3>
+            <p class="fw-bolder text-center">3000 {{ 'packages.currency' | translate }}</p>
+            <button type="button" (click)="subscribe()" class="cta dark-cta">{{ 'packages.subscribe' | translate }}</button>
           </div>
         </div>
       </div>

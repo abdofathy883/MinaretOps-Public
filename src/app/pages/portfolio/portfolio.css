@@ -1,61 +1,9 @@
-.hero {
-  margin-top: 150px;
+.hero{
+    background-color: #F6F9FC;
+    border-radius: 30px;
+    margin-top: 150px;
 }
 
-:root {
-  --bg: #f4f3ef;
-  --card-bg: #ffffff;
-  --accent: #1a1a2e;
-  --accent2: #4f46e5;
-  --text-muted: #6b7280;
-  --tag-bg: #ede9fe;
-  --tag-color: #4f46e5;
-  --btn-bg: #4f46e5;
-  --btn-color: #fff;
-  --radius: 18px;
-  --arrow-size: 40px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* body {
-  background: var(--bg);
-  font-family: 'DM Sans', sans-serif;
-  color: var(--accent);
-  min-height: 100vh;
-  padding: 60px 0 80px;
-} */
-
-/* ── Section Header ── */
-.section-label {
-  font-size: 0.78rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--accent2);
-  font-family: 'Sora', sans-serif;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-family: 'Sora', sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--accent);
-}
-
-.section-title span {
-  color: var(--accent2);
-}
-
-.section-sub {
-  color: var(--text-muted);
-  font-size: 1rem;
-  max-width: 480px;
-}
 
 /* ── Category Tabs ── */
 .category-tabs {
@@ -66,51 +14,39 @@
 }
 
 .tab-btn {
-  border: 1.5px solid #d1d5db;
+  border: 1.5px solid var(--color-purple);
   background: transparent;
-  color: var(--text-muted);
+  color: var(--color-purple);
   border-radius: 999px;
   padding: 7px 20px;
-  font-size: 0.88rem;
-  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.22s ease;
 }
 
 .tab-btn:hover {
-  border-color: var(--accent2);
-  color: var(--accent2);
-  background: var(--tag-bg);
+  color: white;
+  background: var(--color-purple);
 }
 
 .tab-btn.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  background: var(--color-purple);
+  color: white;
 }
 
 /* ── Portfolio Card ── */
 .portfolio-card {
-  /* border-radius: var(--radius);
-  background: var(--card-bg);
+  border-radius: 18px;
+  background: #ffffff;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease;
-  cursor: pointer;
-  overflow: hidden; */
-
-  /* position: relative;
-    width: 300px;
-    height: 200px;
-    background: #4a90e2;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    overflow: hidden; */
+  overflow: hidden;
 }
 
-/* .portfolio-card::before{
+.portfolio-card::before{
     content: "";
     position: absolute;
     top: 30px; 
@@ -122,10 +58,10 @@
     border-radius: 50%;
     box-shadow: 0 0 0 9999px #4a90e2;
     clip-path: circle(50% at 50% 50%);
-} */
+}
 
 /* HTML: <div class="inner-curve"></div> */
-.inner-curve {
+/* .inner-curve {
   --r: 45px;
   --s: 55px;
   --a: 15deg;
@@ -148,7 +84,7 @@
       calc(var(--r) * (sin(var(--a)) - 1)) 0 no-repeat,
     linear-gradient(#000 calc(var(--p) - var(--_d)), #0000 0 calc(var(--p) + var(--_d)), #002 0);
     border-radius: 0 var(--r) 0 0
-}
+} */
 
 .portfolio-card:hover {
   transform: translateY(-6px);
@@ -157,15 +93,15 @@
 
 /* Clip image zoom inside its area without hiding the corner button */
 .card-image-clip {
-  /* overflow: hidden;
-  border-radius: var(--radius) var(--radius) 0 0; */
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 /* Image wrapper */
 .card-image-wrap {
-  /* position: relative;
-  aspect-ratio: 4/3; */
-  border-radius: 0 var(--r) 0 0
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 0 5px 0 0
 }
 
 .card-image-wrap img {
@@ -181,69 +117,9 @@
   transform: scale(1.06);
 }
 
-/* Arrow button — dark circle with white notch in top-right of image */
-.arrow-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 58px;
-  height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  background-color: black;
-  border-radius: 50%;
-}
-
-.arrow-wrapper {
-    position: absolute;
-  top: 0;
-  right: 0;
-  width: 58px;
-  height: 58px;
-    background-color: white;
-}
-/* White quarter-circle notch */
-.arrow-btn::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--card-bg);
-  border-radius: 0 var(--radius) 0 100%;
-}
-
-/* Dark circle */
-.arrow-btn::after {
-  content: '';
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 38px;
-  height: 38px;
-  background: var(--accent);
-  border-radius: 50%;
-  transition:
-    background 0.22s ease,
-    transform 0.22s ease;
-  z-index: 1;
-}
-
 .portfolio-card:hover .arrow-btn::after {
   background: var(--accent2);
   transform: scale(1.1);
-}
-
-.arrow-btn svg {
-  position: relative;
-  z-index: 2;
-  width: 14px;
-  height: 14px;
-  fill: none;
-  stroke: #fff;
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 }
 
 /* Card body */
@@ -253,8 +129,8 @@
 
 .card-category-tag {
   display: inline-block;
-  background: var(--tag-bg);
-  color: var(--tag-color);
+  background: rgb(202, 201, 201);
+  color: var(--color-purple);
   font-size: 0.73rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -265,16 +141,15 @@
 }
 
 .card-title-custom {
-  font-family: 'Sora', sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--color-purple);
   margin: 0 0 6px;
 }
 
 .card-desc {
-  font-size: 0.88rem;
-  color: var(--text-muted);
+  font-size: 1rem;
+  color: rgb(78, 78, 78);
   margin: 0;
   line-height: 1.55;
 }

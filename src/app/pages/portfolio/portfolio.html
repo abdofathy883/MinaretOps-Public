@@ -1,202 +1,61 @@
-<section class="hero">
-  @for (item of items; track $index) {
-    <h1>{{ item.title }}</h1>
-  }
+<section class="container mb-5">
+  <div
+    class="hero text-center py-5 d-flex align-items-center justify-content-center gap-3 d-md-block"
+  >
+    <h2>{{ 'portfolio_hero_title' | translate }}</h2>
+    <p class="mb-1">{{ 'home' | translate }} - {{ 'portfolio_hero_title' | translate }}</p>
+  </div>
 </section>
 
-<div class="container">
-  <!-- Header -->
-  <div class="text-center mb-5">
-    <p class="section-label">Our Work</p>
-    <h2 class="section-title mb-3">Projects That <span>Speak Louder</span></h2>
-    <p class="section-sub mx-auto">
-      A curated selection of work across branding, development, and marketing — built to deliver
-      results.
-    </p>
+@if (isLoading) {
+  <div class="text-center">
+    <div class="spinner-border" style="width: 3rem; height: 3rem" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   </div>
+}
 
-  <!-- Category Tabs -->
-  <div class="category-tabs mb-5">
-    <button class="tab-btn active" data-filter="all">All Work</button>
-    <button class="tab-btn" data-filter="branding">Branding</button>
-    <button class="tab-btn" data-filter="development">Development</button>
-    <button class="tab-btn" data-filter="marketing">Marketing</button>
-    <button class="tab-btn" data-filter="content">Content</button>
-  </div>
+@if (items.length === 0) {
+  <img src="./assets/Empty-amico.png" class="d-block mx-auto" width="30%" alt="" />
+}
 
-  <!-- Portfolio Grid -->
-  <div class="row g-4" id="portfolioGrid">
-    <!-- Card 1 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="branding">
-      <div class="portfolio-card" data-category="branding">
-        <div class="card-image-wrap">
-          <!-- <img
-            src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80"
-            alt="Brand Identity Project"
-            class="border-4"
-          /> -->
-          <img
-            src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80"
-            alt="Brand Identity Project"
-            class="inner-curve card-img"
-          />
-          <div class="arrow-wrapper">
-              <a href="" class="arrow-btn">
+@if (items) {
+  <section class="container">
+    <!-- Category Tabs -->
+    <div class="category-tabs mb-5">
+      <button class="tab-btn active" data-filter="all">{{ 'all_work' | translate }}</button>
+      @for (cat of categories; track $index) {
+        <button class="tab-btn" data-filter="branding">{{ cat.translations[0].title }}</button>
+      }
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="row g-4" id="portfolioGrid">
+      @for (item of items; track $index) {
+        <div class="col-12 col-md-6 col-lg-4" data-category="development">
+          <div class="portfolio-card" data-category="development">
+            <div class="card-image-wrap">
+              <img [src]="item.imageLink" [alt]="item.translations[0].imageAltText" />
+            </div>
+            <div class="card-body-custom py-3 mx-2">
+              <span class="card-category-tag">{{ item.categoryName }}</span>
+              <h3 class="card-title-custom">{{ item.translations[0].title }}</h3>
+              <p class="card-desc" [innerHTML]="item.translations[0].description"></p>
+              <a
+                [routerLink]="['/portfolio', item.slug]"
+                [relativeTo]="null"
+                class="btn btn-primary w-100"
+              >
                 <i class="bi bi-arrow-up-right"></i>
+                <span>see</span>
               </a>
-
+            </div>
           </div>
         </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Branding</span>
-          <h3 class="card-title-custom">Lumio Brand Identity</h3>
-          <p class="card-desc">
-            Full visual identity system for a modern fintech startup — logo, typography, and
-            guidelines.
-          </p>
-        </div>
-      </div>
+      }
     </div>
-
-    <!-- Card 2 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="development">
-      <div class="portfolio-card" data-category="development">
-        <div class="card-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
-            alt="Dashboard App"
-          />
-          
-          <a href="" class="arrow-btn">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Development</span>
-          <h3 class="card-title-custom">Nexus Analytics Dashboard</h3>
-          <p class="card-desc">
-            Real-time data platform with Angular frontend and ASP.NET Core API powering live
-            reporting.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="marketing">
-      <div class="portfolio-card" data-category="marketing">
-        <div class="card-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
-            alt="Performance Marketing"
-          />
-          
-          <a href="" class="arrow-btn">
-            <i class="bi bi-arrow-up-right"></i>
-          </a>
-        </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Marketing</span>
-          <h3 class="card-title-custom">Orion Growth Campaign</h3>
-          <p class="card-desc">
-            Performance marketing strategy that drove 3× ROAS for a D2C e-commerce brand in 90 days.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="content">
-      <div class="portfolio-card" data-category="content">
-        <div class="card-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?w=600&q=80"
-            alt="Content Production"
-          />
-          <div class="arrow-btn">
-            <svg viewBox="0 0 24 24">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </div>
-        </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Content</span>
-          <h3 class="card-title-custom">Vibe Studio Productions</h3>
-          <p class="card-desc">
-            End-to-end video content series for a creator platform — scripting, shooting, and
-            post-production.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="development">
-      <div class="portfolio-card" data-category="development">
-        <div class="card-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80"
-            alt="Web App"
-          />
-          <div class="arrow-btn">
-            <svg viewBox="0 0 24 24">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </div>
-        </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Development</span>
-          <h3 class="card-title-custom">Harvest SaaS Platform</h3>
-          <p class="card-desc">
-            Multi-tenant SaaS with role-based access, audit logging, and CI/CD on Azure for a food
-            company.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="col-12 col-md-6 col-lg-4" data-category="branding">
-      <div class="portfolio-card" data-category="branding">
-        <div class="card-image-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
-            alt="Brand Strategy"
-          />
-          <div class="arrow-btn">
-            <svg viewBox="0 0 24 24">
-              <line x1="7" y1="17" x2="17" y2="7" />
-              <polyline points="7 7 17 7 17 17" />
-            </svg>
-          </div>
-        </div>
-        <div class="card-body-custom">
-          <span class="card-category-tag">Branding</span>
-          <h3 class="card-title-custom">Meridian Brand Refresh</h3>
-          <p class="card-desc">
-            Strategic rebrand for a 15-year-old consulting firm — repositioning voice, visual, and
-            presence.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /row -->
-
-  <!-- View All -->
-  <div class="text-center mt-5">
-    <button class="view-all-btn">
-      View All Projects
-      <svg viewBox="0 0 24 24">
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="12 5 19 12 12 19" />
-      </svg>
-    </button>
-  </div>
-</div>
-<!-- /container -->
+  </section>
+}
 
 <!-- <script>
   const tabs = document.querySelectorAll('.tab-btn');

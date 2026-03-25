@@ -2,15 +2,15 @@
   <div
     class="hero text-center py-5 d-flex align-items-center justify-content-center gap-3 d-md-block"
   >
-    <h2>تواصل معنا</h2>
-    <p class="mb-1">الرئيسية - تواصل معنا</p>
+    <h2>{{ 'contact_us' | translate}}</h2>
+    <p class="mb-1">{{ 'home' | translate }} - {{ 'contact_us' | translate}}</p>
   </div>
 </section>
 
 <section class="container">
   <div class="d-flex gap-3 mb-3">
     <img src="/assets/Group 13255.png" width="40px" alt="" />
-    <h3>دعنا نتواصل</h3>
+    <h3>{{ 'lets_contact' | translate }}</h3>
   </div>
 
   <div class="row">
@@ -27,7 +27,7 @@
       }
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-          <label for="name" class="form-label">الاسم</label>
+          <label for="name" class="form-label">{{ 'name' | translate}}</label>
           <input
             type="text"
             name="name"
@@ -37,7 +37,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="phoneNumber" class="form-label">الهاتف</label>
+          <label for="phoneNumber" class="form-label">{{ 'phone' | translate }}</label>
           <input
             type="tel"
             name="phoneNumber"
@@ -48,7 +48,7 @@
         </div>
         <input type="text" class="form-control" formControlName="website" style="display: none" />
         <div class="mb-3">
-          <label for="email" class="form-label">البريد الإلكتروني</label>
+          <label for="email" class="form-label">{{ 'email' | translate }}</label>
           <input
             type="email"
             name="email"
@@ -58,7 +58,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="message" class="form-label">رسالتك</label>
+          <label for="message" class="form-label">{{ 'message' | translate }}</label>
           <textarea
             name="message"
             id="message"
@@ -70,7 +70,7 @@
 
         <button class="submit-btn">
           <i class="bi bi-rocket-takeoff"></i>
-          إرسال
+          <span>{{ 'submit' | translate}}</span>
         </button>
       </form>
     </div>
@@ -78,7 +78,7 @@
       <div class="row g-3">
         <div class="col-12 col-md-6 social-box py-4 px-3">
           <a href="https://www.facebook.com/TheMinaretAgency" class="text-decoration-none">
-            <i class="bi bi-facebook ms-2"></i>
+            <i class="bi bi-facebook" [ngClass]="marginClass"></i>
             <span>Facebook</span>
           </a>
         </div>
@@ -123,7 +123,7 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/image 3.png" width="40px" alt="" />
-          <h4>عنوان المكتب</h4>
+          <h4>{{ 'office_address' | translate }}</h4>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/4 7.png" width="40px" alt="" />
-          <h4>دعم فني على مدار الساعة</h4>
+          <h4>{{ 'tech_support' | translate}}</h4>
         </div>
         <p class="text-grey mb-1">
           اتصال
@@ -151,7 +151,7 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/image 2.png" width="40px" alt="" />
-          <h4>ساعات العمل</h4>
+          <h4>{{ 'working_hours' | translate}}</h4>
         </div>
         <p class="text-grey">
           <span class="mb-1 d-block"> Mon - Sat 8AM - 10PM </span>

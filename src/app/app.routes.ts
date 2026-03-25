@@ -30,5 +30,10 @@ export const routes: Routes = [
     path: 'portfolio',
     loadComponent: () => import('./pages/portfolio/portfolio').then((m) => m.Portfolio),
     resolve: { seo: seoResolver }
+  },
+  {
+    path: 'portfolio/:slug',
+    loadComponent: () => import('./pages/portfolio-item/portfolio-item').then((m) => m.PortfolioItem),
+    // resolve: { seo: seoResolver }
   }
 ];

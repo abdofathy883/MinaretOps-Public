@@ -1,12 +1,16 @@
 import { ContactService } from './../../services/contact/contact';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ReCaptchaV3Service } from 'ngx-captcha';
 import { ISubmitEntry } from '../../models/contact/i-submit-entry';
+import { TranslatePipe } from '@ngx-translate/core';
+import { LanguageService } from '../../services/languages/language.service';
+import { LanguageCode } from '../../models/portfolio/i-portfolio';
+import { CommonModule, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, TranslatePipe, NgClass, CommonModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
@@ -16,13 +20,15 @@ export class Contact implements OnInit {
   isSending: boolean = false;
   errorMessage: string = '';
   successMessage: string = '';
-  constructor(
-    private contactService: ContactService,
-    private fb: FormBuilder,
-    private reCaptchaV3Service: ReCaptchaV3Service,
-  ) {}
-
+  currentLanguage: LanguageCode = LanguageCode.ar;
+  
+  private contactService = inject(ContactService);
+  private fb = inject(FormBuilder);
+  private reCaptchaV3Service = inject(ReCaptchaV3Service);
+  private languageService = inject(LanguageService);
+  
   ngOnInit(): void {
+    this.currentLanguage = this.languageService.currentLang();
     this.initializeForm();
   }
 
@@ -35,6 +41,11 @@ export class Contact implements OnInit {
       website: [],
     });
   }
+
+  get marginClass(): string {
+  return this.currentLanguage === LanguageCode.ar ? 'ms-2' : 'me-2';
+}
+
   onSubmit() {
     if (this.contactForm.invalid || this.isSending) return;
 
@@ -56,11 +67,9 @@ export class Contact implements OnInit {
             this.contactForm.reset();
             this.isSending = false;
             this.successMessage = 'تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.';
-            // optional: show success message
           },
           error: (error) => {
             this.isSending = false;
-            // optional: show error message
             this.errorMessage = error.error;
             console.log('Failed to submit contact form', error);
           },

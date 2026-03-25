@@ -1,0 +1,11 @@
+@if (project) {
+  <section class="hero">
+    <img [src]="project.imageLink" [alt]="project.translations[0].imageAltText" class="img" />
+  </section>
+  <section class="container">
+    <h1 class="text-center">{{ project.translations[0].title }}</h1>
+    <h5 class="text-center">{{ project.categoryName }}</h5>
+
+    <div [innerHTML]="project.translations[0].description"></div>
+  </section>
+}

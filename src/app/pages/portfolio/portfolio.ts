@@ -1,29 +1,52 @@
 import { PortfolioService } from './../../services/portfolio/portfolio';
-import { Component, inject, OnInit } from '@angular/core';
-import { ICategory, IPortfolio } from '../../models/portfolio/i-portfolio';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
+import { ICategory, IPortfolio, LanguageCode } from '../../models/portfolio/i-portfolio';
+import { LanguageService } from '../../services/languages/language.service';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Subject, takeUntil } from 'rxjs';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [],
+  imports: [TranslatePipe, RouterLink],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.css',
 })
-export class Portfolio implements OnInit{
+export class Portfolio implements OnInit, OnDestroy {
   categories: ICategory[] = [];
   items: IPortfolio[] = [];
+  isLoading: boolean = false;
+
+  currentLanguage: LanguageCode = LanguageCode.ar;
 
   private portfolioService = inject(PortfolioService);
+  private languageService = inject(LanguageService);
+  private translateService = inject(TranslateService);
+
+  private destroy$ = new Subject<void>();
 
   ngOnInit(): void {
+    this.currentLanguage = this.languageService.currentLang();
     this.loadCategories();
     this.loadItems();
+    this.translateService.onLangChange
+    .pipe(takeUntil(this.destroy$))
+    .subscribe(() => {
+      this.loadCategories();
+      this.loadItems();
+    });
   }
 
+  ngOnDestroy() {
+  this.destroy$.next();
+  this.destroy$.complete();
+}
+
   loadCategories() {
-    this.portfolioService.getAllCategories().subscribe({
+    this.portfolioService.getAllCategories(this.currentLanguage).subscribe({
       next: (response) => {
         this.categories = response;
-        console.log('Categories =>', this.categories);
       },
       error: (err) => {
         console.error('Error loading categories =>', err);
@@ -32,12 +55,14 @@ export class Portfolio implements OnInit{
   }
 
   loadItems() {
-    this.portfolioService.getAllItems().subscribe({
+    this.isLoading = true;
+    this.portfolioService.getAllItems(this.currentLanguage).subscribe({
       next: (response) => {
         this.items = response;
-        console.log('Items =>', this.items);
+        this.isLoading = false;
       },
       error: (err) => {
+        this.isLoading = false;
         console.error('Error loading items =>', err);
       }
     });

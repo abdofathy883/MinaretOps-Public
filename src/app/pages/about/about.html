@@ -1,7 +1,7 @@
 <section class="container mb-5">
   <div class="hero text-center py-5 d-flex align-items-center justify-content-center gap-3 d-md-block">
-    <h2>معلومات عنا</h2>
-    <p class="mb-1">الرئيسية - معلومات عنا</p>
+    <h2>{{ 'about.title' | translate }}</h2>
+    <p class="mb-1">{{ 'about.breadcrumb' | translate }}</p>
   </div>
 </section>
 <br>
@@ -10,26 +10,19 @@
   <div class="mb-5">
     <div class="d-flex gap-3 mb-3">
       <img src="/assets/Group 13255.png" width="40px" alt="" />
-      <h3>من نحن</h3>
+      <h3>{{ 'about.who_we_are_title' | translate }}</h3>
     </div>
     <p>
-      في ظل ازداحم السوق وزيادة المنافسة، لم يعد وجودك على الإنترنت كافيًا بحد ذاته.أنت بحاجة إلى
-      دليل، إلى منارة ترشدك في هذا البحر المظلم.  تأسسنا لنكون نحن هذا الدليل... لنرافق نشاطك لحظة
-      بلحظة ونقوده نحو النجاح.
+      {{ 'about.who_we_are_desc' | translate }}
     </p>
   </div>
 
   <div>
     <div class="d-flex gap-3 mb-3">
       <img src="/assets/Group 13255.png" width="40px" alt="" />
-      <h3>لماذا اخترنا أن نكون <span class="fw-bolder">المنارة</span>؟</h3>
+      <h3><span [innerHTML]="'about.why_lighthouse_title' | translate"></span></h3>
     </div>
-    <p>
-      كانت المنارة قديما ترشد السفن التائهة في البحر، وتُنير لها الطريق وسط الظلام والضباب. <br />
-      اليوم أصبح السوق مثل البحر... <br />
-      وأصبحت السفن مشاريع ناشئة، وشركات صغيرة ومتوسطة تبحث عن طريقها نحو النجاح. <br />
-      من هنا جاء اختيارنا "المنارة"
-    </p>
+    <p [innerHTML]="'about.why_lighthouse_desc' | translate"></p>
   </div>
 </section>
 <br>
@@ -39,13 +32,10 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/image 3.png" width="40px" alt="" />
-          <h4>أهدافنا</h4>
+          <h4>{{ 'about.goals_title' | translate }}</h4>
         </div>
         <ul>
-          <li>دعم الشركات الناشئة والصغيرة والمتوسطة في رحلتها نحو التحوّل الرقمي.</li>
-          <li>ربط كل جهدٍ تسويقي بهدفٍ محدّد يمكن قياسه وتطويره.</li>
-          <li>بناء شراكات طويلة الأمد، لا تعاون موسمي ينتهي بانتهاء حملة.</li>
-          <li>تقديم حلولٍ تسويقية تركز على النتيجة، لا على الشكل فقط.</li>
+          <li *ngFor="let goal of ('about.goals_list' | translate)">{{ goal }}</li>
         </ul>
       </div>
     </div>
@@ -53,11 +43,10 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/4 7.png" width="40px" alt="" />
-          <h4>رؤيتنا</h4>
+          <h4>{{ 'about.vision_title' | translate }}</h4>
         </div>
         <p>
-          نؤمن بأن ازدهار الأعمال يعني ازدهار المجتمع سواء كنا شرارة البداية أو شركاء في تكوين مجتمع
-          مليئ بالإبداع و الإبتكار.
+          {{ 'about.vision_desc' | translate }}
         </p>
       </div>
     </div>
@@ -65,11 +54,10 @@
       <div class="about-box h-100">
         <div class="d-flex gap-2 mb-3">
           <img src="/assets/image 2.png" width="40px" alt="" />
-          <h4>رسالتنا</h4>
+          <h4>{{ 'about.mission_title' | translate }}</h4>
         </div>
         <p>
-          رسالتنا تتجاوز مجرد تقديم خدمات تسويقية؛ نحن موجودون لنوفر الإرشاد، نزرع الشفافية، ونحمل
-          المسؤولية الكاملة عن النتائج التي نصنعها مع عملائنا.
+          {{ 'about.mission_desc' | translate }}
         </p>
       </div>
     </div>
@@ -79,19 +67,19 @@
 <section class="container">
   <div class="d-flex gap-3 mb-3">
     <img src="/assets/Group 13255.png" width="40px" alt="" />
-    <h3>تواصل معنا</h3>
+    <h3>{{ 'about.contact_title' | translate }}</h3>
   </div>
   <div class="row">
     <div class="col-12 col-md-6 mb-3">
       <p>
-        أنت مستعد لأن نكون دليلاً لعلامتك في السوق؟ <br />
-        يسعدنا التعرف على نشاطك، وسماع أهدافك ومناقشة سبل التعاون.
+        {{ 'about.contact_desc1' | translate }} <br />
+        {{ 'about.contact_desc2' | translate }}
       </p>
     </div>
     <div class="col-12 col-md-6 d-flex justify-content-end align-items-end">
       <a href="https://wa.me/+20115113113" class="cta mb-3">
         <i class="bi bi-whatsapp ms-2"></i>
-        <span>تواصل معنا واتساب</span>
+        <span>{{ 'about.whatsapp_btn' | translate }}</span>
       </a>
     </div>
   </div>

@@ -17,27 +17,67 @@
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
             class="menu-link"
-            >الرئيسية</a
+            >{{ 'home' | translate }}</a
           >
         </li>
-        <li><a routerLink="/about-us" routerLinkActive="active" class="menu-link">من نحن</a></li>
-        <li><a routerLink="/our-services" routerLinkActive="active" class="menu-link">خدماتنا</a></li>
         <li>
-          <a routerLink="/contact-us" routerLinkActive="active" class="menu-link">تواصل معنا</a>
+          <a routerLink="/about-us" routerLinkActive="active" class="menu-link">{{
+            'about_us' | translate
+          }}</a>
+        </li>
+        <li>
+          <a routerLink="/our-services" routerLinkActive="active" class="menu-link">{{
+            'our_services' | translate
+          }}</a>
+        </li>
+        <li>
+          <a routerLink="/portfolio" routerLinkActive="active" class="menu-link">
+            {{ 'portfolio' | translate }}
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact-us" routerLinkActive="active" class="menu-link">{{
+            'contact_us' | translate
+          }}</a>
         </li>
       </ul>
     </nav>
 
+    <div class="language-switcher">
+      <div
+        class="switcher-container"
+        (click)="toggleLanguageMenu()"
+        [class.open]="isLanguageMenuOpen"
+      >
+        <div class="current-language">
+          <i class="bi bi-translate"></i>
+          <span>{{ getCurrentLangLabel(currentLang) }}</span>
+          <i class="bi bi-chevron-down switcher-arrow"></i>
+        </div>
+
+        <div class="language-dropdown" [class.show]="isLanguageMenuOpen">
+          <div class="language-option" (click)="switchLanguage(1)">
+            <div class="lang-icon">EN</div>
+            <span>English</span>
+          </div>
+          <div class="language-option" (click)="switchLanguage(0)">
+            <div class="lang-icon">AR</div>
+            <span>العربية</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CTA (Left in RTL) - hidden on small/medium -->
     <div class="cta-container d-none d-lg-block">
-      <a href="https://wa.me/+966557742801" class="cta1">احجز استشارة تسويقية</a>
+      <a href="https://wa.me/+966557742801" class="cta1">{{ 'contact_button' | translate }}</a>
     </div>
 
     <!-- Mobile menu button - visible only on small screens (below md) -->
     <div class="d-md-none">
       <button
         class="btn btn-link mobile-menu-btn text-white p-2"
-        style="font-size: 25px;"
+        style="font-size: 25px"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasMobileMenu"
@@ -79,10 +119,35 @@
             >الرئيسية</a
           >
         </li>
-        <li><a routerLink="/about-us" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">من نحن</a></li>
-        <li><a routerLink="/our-services" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">خدماتنا</a></li>
         <li>
-          <a routerLink="/contact-us" routerLinkActive="active" class="menu-link" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasMobileMenu">تواصل معنا</a>
+          <a
+            routerLink="/about-us"
+            routerLinkActive="active"
+            class="menu-link"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasMobileMenu"
+            >من نحن</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/our-services"
+            routerLinkActive="active"
+            class="menu-link"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasMobileMenu"
+            >خدماتنا</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/contact-us"
+            routerLinkActive="active"
+            class="menu-link"
+            data-bs-dismiss="offcanvas"
+            data-bs-target="#offcanvasMobileMenu"
+            >تواصل معنا</a
+          >
         </li>
       </ul>
       <a class="cta1 mt-3 w-100" href="https://wa.me/+966557742801">احجز استشارة تسويقية</a>
