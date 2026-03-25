@@ -7,6 +7,8 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { LanguageService } from '../../services/languages/language.service';
 import { LanguageCode } from '../../models/portfolio/i-portfolio';
 import { CommonModule, NgClass } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Seo } from '../../services/seo/seo';
 
 @Component({
   selector: 'app-contact',
@@ -21,13 +23,19 @@ export class Contact implements OnInit {
   errorMessage: string = '';
   successMessage: string = '';
   currentLanguage: LanguageCode = LanguageCode.ar;
-  
+
   private contactService = inject(ContactService);
   private fb = inject(FormBuilder);
   private reCaptchaV3Service = inject(ReCaptchaV3Service);
   private languageService = inject(LanguageService);
-  
+
+
+  private route = inject(ActivatedRoute);
+  private seoService = inject(Seo);
+
   ngOnInit(): void {
+    const seo = this.route.snapshot.data['seo'];
+    this.seoService.applySeo(seo);
     this.currentLanguage = this.languageService.currentLang();
     this.initializeForm();
   }
@@ -43,8 +51,8 @@ export class Contact implements OnInit {
   }
 
   get marginClass(): string {
-  return this.currentLanguage === LanguageCode.ar ? 'ms-2' : 'me-2';
-}
+    return this.currentLanguage === LanguageCode.ar ? 'ms-2' : 'me-2';
+  }
 
   onSubmit() {
     if (this.contactForm.invalid || this.isSending) return;

@@ -5,7 +5,8 @@ import { LanguageService } from '../../services/languages/language.service';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Subject, takeUntil } from 'rxjs';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { Seo } from '../../services/seo/seo';
 
 @Component({
   selector: 'app-portfolio',
@@ -23,10 +24,14 @@ export class Portfolio implements OnInit, OnDestroy {
   private portfolioService = inject(PortfolioService);
   private languageService = inject(LanguageService);
   private translateService = inject(TranslateService);
+  private route = inject(ActivatedRoute);
+  private seoService = inject(Seo);
 
   private destroy$ = new Subject<void>();
-
+  
   ngOnInit(): void {
+    const seo = this.route.snapshot.data['seo'];
+    this.seoService.applySeo(seo);
     this.currentLanguage = this.languageService.currentLang();
     this.loadCategories();
     this.loadItems();

@@ -4,6 +4,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 import { Api } from '../global-api/api';
+import { LanguageCode } from '../../models/portfolio/i-portfolio';
 
 const SEO_KEY = makeStateKey<any>('seo-data');
 
@@ -21,7 +22,7 @@ export class Seo {
   private platformId = inject(PLATFORM_ID);
 
 
-  getSeo(route: string, lang: string = 'ar'): Observable<ISeoPage | null> {
+  getSeo(route: string, lang: LanguageCode = LanguageCode.ar): Observable<ISeoPage | null> {
     // Check in-memory cache first
     if (this.cache.has(route)) {
       const data = this.cache.get(route)!;
